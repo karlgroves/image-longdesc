@@ -1,0 +1,62 @@
+<!-- Import Polymer -->
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<!-- Define your custom element -->
+<polymer-element name="image-longdesc" attributes="src alt longdesc">
+    <template>
+        <style>
+            figure {
+                border: 2px solid #ddd;
+                padding: .5em;
+                background-color: #eee;
+                border-radius: 5px;
+            }
+
+            figcaption {
+                font-family: arial, helvetica, Verdana, sans-serif;
+                font-size: .86em;
+            }
+        </style>
+        <figure><img src="{{src}}" alt="{{alt}}" longdesc="{{longdesc}}"></figure>
+    </template>
+
+    <script>
+        Polymer('image-longdesc', {
+            // Fires when the element’s initial set of children and siblings are guaranteed to exist
+            domReady: function () {
+                function doCaption(el) {
+                    var container = el.parentNode,
+                        alt = el.getAttribute('alt'),
+                        ldRef = el.getAttribute('longdesc'),
+                        longdescLabel = 'Full Description',
+                        ld = document.createElement('a'),
+                        ldText = document.createTextNode(longdescLabel),
+                        caption = document.createElement('figcaption'),
+                        captionText = document.createTextNode(alt);
+
+
+                    ld.setAttribute('href', ldRef);
+                    ld.appendChild(ldText);
+
+                    el.setAttribute('alt', '');
+
+                    caption.appendChild(captionText);
+                    caption.appendChild(ld);
+
+                    container.appendChild(caption);
+
+                    container.setAttribute('style', 'width:' + el.offsetWidth + 'px;');
+
+                }
+
+
+
+                var image = this.shadowRoot.querySelector('img');
+
+                image.onload = function () {
+                    doCaption(this);
+                }
+            }
+        });
+    </script>
+</polymer-element>

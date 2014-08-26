@@ -1,0 +1,19 @@
+{
+    "name": "image-longdesc",
+    "version": "0.0.0",
+    "description": "Adds a useful, universally usable longdesc link on images.",
+    "license": "MIT",
+    "main": "dist/image-longdesc.html",
+    "keywords": [
+        "polymer",
+        "web-components"
+    ],
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components"
+    ],
+    "dependencies": {
+        "polymer": "Polymer/polymer#~0.3.3"
+    }
+}

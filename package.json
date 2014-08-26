@@ -1,0 +1,40 @@
+{
+    "name": "image-caption",
+    "version": "0.0.1",
+    "description": "a web component that shows an image with a caption made from its alt attribute contents",
+    "title": "image-caption",
+    "keywords": [
+        "accessibility, html, css, javascript, polymer, web components"
+    ],
+    "bugs": {
+        "url": "https://github.com/karlgroves/image-longdesc/issues"
+    },
+    "contributors": [
+        {
+            "name": "Karl Groves",
+            "email": "karl@tenon.io"
+        }
+    ],
+    "author": {
+        "name": "Karl Groves",
+        "email": "karl@tenon.io",
+        "url": "http://www.tenon.io"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:karlgroves/image-caption.git"
+    },
+    "devDependencies": {
+        "grunt": "~0.4.1",
+        "grunt-cli": "~0.1.9",
+        "grunt-contrib-connect": "~0.8.0",
+        "grunt-gh-pages": "~0.9.1",
+        "grunt-text-replace": "~0.3.11"
+    },
+    "licenses": [
+        {
+            "type": "MIT"
+        }
+    ],
+    "readmeFilename": "README.md"
+}
