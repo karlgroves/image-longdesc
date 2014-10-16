@@ -36,7 +36,7 @@ Or [download as ZIP](https://github.com/karlgroves/image-longdesc/archive/master
 3. Start using it!
 
     ```html
-    <image-longdesc src="/foo.png" alt="useful alt for the foo image"></image-longdesc>
+    <image-longdesc src="/foo.png" alt="useful alt for the foo image" longdesc="/path-to-longdesc.html"></image-longdesc>
     ```
 
 ## Options

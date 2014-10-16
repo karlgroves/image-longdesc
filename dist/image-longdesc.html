@@ -35,13 +35,15 @@
                         captionText = document.createTextNode(alt);
 
 
-                    ld.setAttribute('href', ldRef);
-                    ld.appendChild(ldText);
-
                     el.setAttribute('alt', '');
 
                     caption.appendChild(captionText);
-                    caption.appendChild(ld);
+
+                    if (ldRef) {
+                        ld.setAttribute('href', ldRef);
+                        ld.appendChild(ldText);
+                        caption.appendChild(ld);
+                    }
 
                     container.appendChild(caption);
 
